@@ -1,0 +1,76 @@
+#Geocoding
+
+##Idea
+
+Today we're going to add some new functionality to our Where-U-At app. The goal for today is to enter a location and have our app tell us where u at.
+
+We're going to use the Geocoder library to convert some location data to a Locality (basically the name of a town or city).
+
+The first thing we'll add is our text box to accept some location data.
+
+##Code
+
+###Layout
+
+**EditText**
+
+The only addition to our layout is our location text box, implemented as an EditText object.
+
+	<EditText
+            android:id="@+id/editText1"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" 
+            android:hint="@string/edit_location"/>
+
+###MainActivity
+
+**onClick**
+
+	// Grab the text data from the text box
+	EditText editText = (EditText)findViewById(R.id.editText1);
+	String message = editText.getText().toString();
+	i.putExtra(EXTRA_MESSAGE, message);
+	
+###ResultActivity
+
+**onCreate**
+
+	// Instantiate Geocoder
+	final Geocoder geocoder = new Geocoder(this);
+		
+	// Get the Intent from MainActivity
+	Intent i = getIntent();
+
+	// Get the location string from MainActivity
+	String  = i.getStringExtra(MainActivity.EXTRA_MESSAGE);
+
+	try
+	{
+		// Get an address from the location data provided
+		List<Address> addresses = geocoder.getFromLocationName(ZIP, 1);
+		if(addresses != null && !addresses.isEmpty())
+		{
+			Address address = addresses.get(0);
+			
+			// Pull locality out of address
+			if(address.getLocality() != null)
+			{
+				message = String.format("%s", address.getLocality());
+			}
+			else
+			{
+				message = "Unable to locate";
+			}
+			resultView.setText(message);
+		}
+		else
+		{
+			resultView.setText("Unable to locate");
+		}
+	}
+	catch (IOException e)
+	{
+		Log.d("Demo", "IOException");
+	}
