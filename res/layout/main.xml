@@ -16,14 +16,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="25dip"
-            android:text="Welcome to Where-U-At"
+            android:text="@string/welcome"
             android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" 
+            android:hint="@string/edit_location"/>
 
         <Button
             android:id="@+id/find_me_button"
-            android:layout_width="fill_parent"
+            android:layout_weight="0"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Find me" />
+            android:text="@string/button_find_me" />
 
     </LinearLayout>
 

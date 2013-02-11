@@ -2,6 +2,12 @@
 <resources>
 
     <string name="hello">Hello World, Main_Activity!</string>
-    <string name="app_name">Gitmad_WhereUAt</string>
+    <string name="app_name">Where-U-At</string>
+    <string name="edit_location">Enter location</string>
+    <string name="button_find_me">Find me</string>
+    <string name="welcome">Welcome to Where-U-At</string>
+    <string name="location_is">The location is:</string>
+    <string name="back_to_main">Back to Find Screen</string>
+    
 
 </resources>
