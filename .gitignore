@@ -24,3 +24,6 @@ proguard/
 *.iws
 .idea/
 
+# File for API key
+apikey.txt
+

@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-     android:padding="30dip"
-   android:orientation="horizontal">
-   <LinearLayout
-      android:orientation="vertical"
-      android:layout_height="wrap_content"
-      android:layout_width="fill_parent"
-      android:layout_gravity="center">
-      <TextView
-         android:text="@string/location_is"
-         android:layout_height="wrap_content"
-         android:layout_width="wrap_content"
-         android:layout_gravity="center"
-         android:layout_marginBottom="25dip"
-         android:textSize="24.5sp" />
-          <TextView
-          android:id="@+id/result_value_label"
-         android:layout_height="wrap_content"
-         android:layout_width="wrap_content"
-         android:layout_gravity="center"
-         android:layout_marginBottom="25dip"
-         android:textSize="24.5sp" />
-      <Button
-         android:id="@+id/back_to_menu_button"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:text="@string/back_to_main" />
-      </LinearLayout>
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".7"
+        class="com.google.android.gms.maps.MapFragment"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <TextView
+            android:text="@string/location_is"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/result_value_label"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textSize="20sp"/>
+        <Button
+            android:id="@+id/back_to_menu_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/back_to_main"/>
+    </LinearLayout>
 </LinearLayout>

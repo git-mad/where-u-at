@@ -8,6 +8,7 @@
     <string name="welcome">Welcome to Where-U-At</string>
     <string name="location_is">The location is:</string>
     <string name="back_to_main">Back to Find Screen</string>
+    <string name="api_key">*snip*</string>
     
 
 </resources>

@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ResultActivity extends Activity implements OnClickListener {
 	private String result = "not set";
