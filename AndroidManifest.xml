@@ -40,7 +40,7 @@
             android:name=".ResultActivity" >
         </activity>
         <activity 
-            android:label="ListExample"
+            android:label="Leaderboard"
             android:name=".ListExampleActivity" >
         </activity>
         <activity 

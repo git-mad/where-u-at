@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/addEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+    <EditText
+            android:id="@+id/leaderboard_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_text_hint"
+            android:ems="10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"/>
+    <Button
+            android:id="@+id/leaderboard_add"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_alignLeft="@+id/leaderboard_input"
+            android:layout_below="@+id/leaderboard_input"
+            android:layout_alignRight="@+id/leaderboard_input"/>
+
+    <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/leaderboard_refresh"
+            android:layout_alignLeft="@+id/leaderboard_input"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/leaderboard_input"/>
+
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="241dp"
+            android:id="@+id/leaderboard"
+            android:layout_below="@+id/leaderboard_add"
+            android:layout_alignLeft="@+id/input_field"
+            android:layout_alignRight="@+id/input_field"
+            android:layout_above="@+id/leaderboard_refresh"/>
+</RelativeLayout>

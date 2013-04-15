@@ -11,7 +11,7 @@
     <string name="api_key">*snip*</string>
     <string name="enter_text_hint">Enter some text</string>
     <string name="button_image_gridview">Vacation Photos</string>
-    <string name="button_location_list">Location List</string>
+    <string name="button_location_list">Location Leaderboard</string>
     <string name="white">#FFFFFF</string>
     <string name="button_record_memo">Record Memo</string>
     <string name="button_start_recording">Start Recording</string>
